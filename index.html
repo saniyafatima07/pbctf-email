@@ -1,19 +1,3 @@
-import smtplib
-from email.mime.multipart import MIMEMultipart
-from email.mime.text import MIMEText
-import os
-from dotenv import load_dotenv
-
-SMTP_SERVER = "server.hosting3.acm.org"
-SMTP_PORT = 465
-load_dotenv()
-
-USERNAME = os.getenv('USERNAME')
-PASSWORD = os.getenv('PASSWORD')
-
-SUBJECT = "Invitation for Students to Participate in PBCTF 4.0"
-
-html_content = """
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -374,12 +358,6 @@ html_content = """
       <p class="invitation-text">Bring your team, bring your skills, and bring the heat. See you at the battlefield!</p>
     </div>
 
-    <div class="cta-section">
-    <a style="color: #ffffff;" href="https://wa.me/?text=%0APBCTF%204.0%20Invitation%0A%0APoint%20Blank%20is%20back%20with%20the%20latest%20edition%20of%20Offline%20Capture%20The%20Flag%20event%20PBCTF%204.0.%0A%0AWhat%20started%20as%20a%20campus-wide%20CTF%20is%20now%20gearing%20up%20to%20become%20one%20of%20Bangalore%27s%20biggest%20CTFs%2C%20bringing%20together%20cybersecurity%20enthusiasts%2C%20ethical%20hackers%2C%20and%20problem-solvers%20from%20all%20across%20the%20region.%0A%0ACTF%20Categories%3A%0A-%20Cryptography%0A-%20Forensics%0A-%20Reverse%20Engineering%0A-%20Web%20Application%20Security%0A-%20Mobile%20App%20Security%0A-%20Cloud%20Security%0A-%20OSINT%20%28Open%20Source%20Intelligence%29%0A%0AEvent%20Date%3A%202nd%20August%202025%0AVenue%3A%20CSE%20Block%2C%20Dayananda%20Sagar%20College%20of%20Engineering%2C%20Bengaluru%0AMode%3A%20Offline%0ATeam%20Size%3A%20Solo/Duo%0A%0APrize%20Pool%3A%0A-%20Cash%20prizes%20for%20the%20Top%203%20Teams%0A-%20Exclusive%20certification%20vouchers%20for%20the%20Top%20Performing%20Team%0A%0ARegister%20now%3A%20https%3A//pointblank.club/pbctf%0A%0ABring%20your%20team%2C%20bring%20your%20skills%2C%20and%20bring%20the%20heat.%20See%20you%20at%20the%20battlefield%21%0A%0AInstagram%3A%20https%3A//www.instagram.com/pointblank_dsce/%0ALinkedIn%3A%20https%3A//www.linkedin.com/company/point-blank-d/posts/%0A"</a>
-    <p style="margin-top: 15px; text-align: center; font-size: 14px;">Invite students to participate and gain valuable exposure and real-world experience in cyber security. </p>
-    </div>
-
-
     <div class="footer">
       <p>Warm Regards,<br><strong>Team Point Blank</strong></p>
 
@@ -391,61 +369,3 @@ html_content = """
    </div>
 </body>
 </html>
-"""
-
-recipient_emails = ["saniya200631@gmail.com"]
-
-# recipient_emails = [
-# "principal@jssateb.ac.in", "principalubdt@gmail.com", "hvbyregowda@gmail.com", "principal@kssem.edu.in", "principal@sjce.ac.in",
-# "principal@cmrit.ac.in", "principalmrit15@gmail.com", "dir.soa.hms@gmail.com", "principal@sahyadri.edu.in", "principal@atria.edu",
-# "principal@rvce.edu.in", "bnmitprincipal@gmail.com", "principal@bnmit.in", "principalrymec@gmail.com", "principal@rymec.in",
-# "principal@ewit.edu.in", "principal@navkisce.ac.in", "veeresh1971@gmail.com", "principalamruta@gmail.com", "director@cittumkur.org",
-# "sureshtumkur@yahoo.com", "principal@vemanait.edu.in", "principal@git.edu", "keerthiresearch@yahoo.com", "narayana.bv73@gmail.com",
-# "principalmmct@cmc.ac.in", "thippeswamy@vtu.ac.in", "shreedharkolekar@gmail.com", "guru14swamy@gmail.com", "aswathmu@gmail.com",
-# "dbit.principal@gmail.com", "ppl-dsce@dayanandasagar.edu", "vsramamurthy@yahoo.com", "director@nittesoa.ac.in", "director_nittesoa@nitte.edu.in",
-# "principal@rrce.org", "ytk_gowda@yahoo.com", "principal@newhorizonindia.edu", "principal@veerappanistyecs.org", "gecramatal@gmail.com",
-# "principal@pes.edu", "santhoshkumarg@ewce.edu.in", "principal@vvce.ac.in", "suriakls@gmail.com", "principal@sjbit.edu.in",
-# "principal@mitkundapura.com", "becprincipal@yahoo.com", "principaldrsmce@gmail.com", "principal@kittiptur.ac.in", "gttcpgmys@gmail.com",
-# "anita.dpal@gmail.com", "principal@sode-edu.in", "pplgeckrpet2018@gmail.com", "principal.kitm@gmail.com", "principal.rvca@rvei.edu.in",
-# "ndg0021@gmail.com", "shanthalageck@gmail.com", "principalkct@rediffmail.com", "zakirsab@gmail.com", "principal@klecet.edu.in",
-# "principal.nit@navodaya.edu.in", "director@isab.in", "meenakshirpatil@gmail.com", "MSATHYA15@gmail.com", "sheerazzaidi@hotmail.com",
-# "kgchandrashekar@yahoo.com", "principalait@acharya.ac.in", "principal@pdit.ac.in", "principal.apsce@gmail.com", "r.nagaraja@yahoo.com",
-# "principal@drttit.edu.in", "principal.ksit@gmail.com", "ajenggcollege@gmail.com", "sskul@pes.edu", "principal@hsit.ac.in",
-# "principal@bce.org.in", "director.asa2016@gmail.com", "principal@beads.edu.in", "ravishankarmcn@gmail.com", "principal@yit.edu.in",
-# "principal@bitm.edu.in", "principal@ncetmail.com", "principal@saividya.ac.in", "principalbarch@gsss.edu.in", "principal@rljit.in",
-# "principal@sgbit.edu.in", "principal@bgscet.ac.in", "mmbenal@gmail.com", "principal@gmit.ac.in", "kalpana_manchali123@yahoo.com",
-# "prashanthbanakar77@gmail.com", "praveena.gowda@gmail.com", "dsk.bce@gmail.com", "mahe_awati@yahoo.com", "principal@nie.ac.in",
-# "gcemprincipal@gmail.com", "gsapprincipal@gopalancolleges.com", "gcemprincipal@gopalancolleges.com", "nsriram3999@gmail.com",
-# "principal@mcehassan.ac.in", "principal@pdaengg.com", "principal.rvitm@rvei.edu.in", "mvlatte@rediffmail.com", "principal@sit.ac.in",
-# "principal@wcfa.ac.in", "principalaiet08@gmail.com", "engprincipal@theoxford.edu", "principal@mitmysore.in", "principal@sdmit.in",
-# "principal@btibangalore.org", "drsaleembti@gmail.com", "bmssa.office@gmail.com", "principalsvgi@gmail.com", "coorgcitprincipal@gmail.com",
-# "principal@dsatm.edu.in", "principal@gsss.edu.in", "aaad.archi@gmail.com", "sreeramareddy90@gmail.com", "ctjayadeva@yahoo.com",
-# "gtraju1990@yahoo.com", "principal@sjec.ac.in", "principal@mmec.edu.in", "principal.gecch@gmail.com", "bshivakumara@gmail.com",
-# "rkcivil2008@gmail.com", "narayanbyrappa53@gmail.com", "principal.ait.t@gmail.com", "anami_basu@hotmail.com", "mushtaqbhavikatti@yahoo.com",
-# "basavaraj971@gmail.com", "principal@sapthagiri.edu.in", "principal@bitmangalore.edu.in", "suresha_rec@rediffmail.com",
-# "director.bmsarch@gmail.com", "principal@hkbk.edu.in", "dean@sjbsap.edu.in", "sasi_mun@rediffmail.com", "mahendrakv@gmail.com",
-# "hpjagga@gmail.com", "principal@jnnce.ac.in", "channu2k3@yahoo.com", "ramismk@pace.edu.in", "principal@rgit.ac.in",
-# "gundannavarganesh1@gmail.com", "principal@sjcit.ac.in", "principal@rvca.in", "acs.exam@gmail.com", "msvgi@yahoo.com",
-# "deanbgssap.edu.in", "2014bgssap@gmail.com", "principal@kssa.edu.in", "principalengg@mvjce.edu.in", "principal@msa.edu.in",
-# "pplgect@gmail.com", "shravankerur@yahoo.com", "principal@jainbgm.in", "principal@drait.edu.in", "vasthu.arch@gmail.com",
-# "sditprincipal@gmail.com", "tjitprincipal@tjohngroup.com", "gpkbms@gmail.com", "principal@shrideviengineering.org",
-# "principal@sjmit.ac.in", "principaljvit@gmail.com", "principal@sirmvit.edu", "nvrnaidu@gmail.com","principal@rnsit.ac.in","pro@gcu.edu.in","info@jyothyit.ac.in", "principal@sit.ac.in","info@sirmvit.edu", "admn@msrit.edu","principal@msrit.edu", "principal@dsatm.edu.in", "facility-head@dsatm.edu.in","hodaiml@dsatm.edu.in","hod-csd@dsatm.edu.in","deanacademics@dsatm.edu.in", "hod.eee@dsatm.edu.in", "hodise@dsatm.edu.in","provc@reva.edu.in","info@reva.edu.in","hod-me@dayanandasagar.edu","hod-rai@dayanandasagar.edu","hod-ise@dayanandasagar.edu","hod-eee@dayanandasagar.edu","hod-csd@dayanandasagar.edu","hod-csds@dayanandasagar.edu","hod-cse@dayanandasagar.edu"
-# ]
-
-with smtplib.SMTP_SSL(SMTP_SERVER, SMTP_PORT) as server:
-    server.login(USERNAME, PASSWORD)
-
-    for i,email in enumerate(recipient_emails):
-        try:
-            message = MIMEMultipart()
-            message["From"] = USERNAME
-            message["To"] = email
-            message["Subject"] = SUBJECT
-            
-            message.attach(MIMEText(html_content, "html"))
-            
-            server.sendmail(USERNAME, email, message.as_string())
-            print(f"{i}. Email sent to {email}")
-        except Exception as e:
-            print(f"Failed to send email to {email}: {e}")
-print("All emails sent successfully!")
