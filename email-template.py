@@ -166,6 +166,33 @@ html_content = """
       transform: translateY(-3px);
     }
 
+    .whatsapp-share {
+      background: linear-gradient(90deg, #25d366, #128C7E) !important;
+      color: white !important;
+    }
+    
+    .whatsapp-button {
+      display: inline-block;
+      margin: 25px 10px 10px;
+      padding: 14px 28px;
+      background: linear-gradient(90deg, #25d366, #128C7E);
+      color: white;
+      font-weight: bold;
+      border-radius: 50px;
+      text-decoration: none;
+      font-size: 16px;
+      font-family: 'Orbitron', sans-serif;
+      letter-spacing: 1px;
+      transition: all 0.3s;
+      border: none;
+      box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+    }
+    
+    .whatsapp-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5);
+    }
+
     .section {
       margin: 40px 0;
     }
@@ -373,20 +400,19 @@ html_content = """
       <div class="pulse-border"></div>
       <p class="invitation-text">Bring your team, bring your skills, and bring the heat. See you at the battlefield!</p>
     </div>
-
     <div class="cta-section">
-    <a style="color: #ffffff;" href="https://wa.me/?text=%0APBCTF%204.0%20Invitation%0A%0APoint%20Blank%20is%20back%20with%20the%20latest%20edition%20of%20Offline%20Capture%20The%20Flag%20event%20PBCTF%204.0.%0A%0AWhat%20started%20as%20a%20campus-wide%20CTF%20is%20now%20gearing%20up%20to%20become%20one%20of%20Bangalore%27s%20biggest%20CTFs%2C%20bringing%20together%20cybersecurity%20enthusiasts%2C%20ethical%20hackers%2C%20and%20problem-solvers%20from%20all%20across%20the%20region.%0A%0ACTF%20Categories%3A%0A-%20Cryptography%0A-%20Forensics%0A-%20Reverse%20Engineering%0A-%20Web%20Application%20Security%0A-%20Mobile%20App%20Security%0A-%20Cloud%20Security%0A-%20OSINT%20%28Open%20Source%20Intelligence%29%0A%0AEvent%20Date%3A%202nd%20August%202025%0AVenue%3A%20CSE%20Block%2C%20Dayananda%20Sagar%20College%20of%20Engineering%2C%20Bengaluru%0AMode%3A%20Offline%0ATeam%20Size%3A%20Solo/Duo%0A%0APrize%20Pool%3A%0A-%20Cash%20prizes%20for%20the%20Top%203%20Teams%0A-%20Exclusive%20certification%20vouchers%20for%20the%20Top%20Performing%20Team%0A%0ARegister%20now%3A%20https%3A//pointblank.club/pbctf%0A%0ABring%20your%20team%2C%20bring%20your%20skills%2C%20and%20bring%20the%20heat.%20See%20you%20at%20the%20battlefield%21%0A%0AInstagram%3A%20https%3A//www.instagram.com/pointblank_dsce/%0ALinkedIn%3A%20https%3A//www.linkedin.com/company/point-blank-d/posts/%0A"</a>
+    <a style="color: #ffffff;" href="https://wa.me/?text=PBCTF%204.0%20%E2%80%93%20Capture%20The%20Flag%20Competition%0A%0APoint%20Blank%20is%20back%20with%20PBCTF%204.0%2C%20an%20exciting%20offline%20CTF%20event.%0A%0AWhat%20started%20as%20a%20campus-wide%20event%20is%20now%20becoming%20one%20of%20Bangalore's%20biggest%20CTFs%20%E2%80%94%20uniting%20cybersecurity%20enthusiasts%2C%20ethical%20hackers%2C%20and%20problem-solvers%20from%20all%20over%20the%20region.%0A%0ACTF%20Categories%3A%0A-%20Cryptography%0A-%20Forensics%0A-%20Reverse%20Engineering%0A-%20Web%20Application%20Security%0A-%20Mobile%20App%20Security%0A-%20Cloud%20Security%0A-%20OSINT%20(Open%20Source%20Intelligence)%0A%0AEvent%20Details%3A%0ADate%3A%202nd%20August%202025%20%20%0AVenue%3A%20CSE%20Block%2C%20Dayananda%20Sagar%20College%20of%20Engineering%2C%20Bengaluru%20%20%0AMode%3A%20Offline%20%20%0ATeam%20Size%3A%20Solo%20or%20Duo%0A%0APrize%20Pool%3A%0A-%20Cash%20prizes%20for%20the%20Top%203%20Teams%20%20%0A-%20Certification%20vouchers%20for%20Top%20Performing%20Team%0A%0ABring%20your%20team%2C%20bring%20your%20skills%2C%20and%20bring%20the%20heat.%20See%20you%20at%20the%20battlefield.%0A%0ARegister%20now%3A%20https%3A%2F%2Fpointblank.club%2Fpbctf%20%0A%0AWarm%20Regards%2C%0ATeam%20Point%20Blank%0A%0AFollow%20us%3A%20%0ALinkedIn%3A%20https%3A%2F%2Fwww.linkedin.com%2Fcompany%2Fpoint-blank-d%2Fposts%2F%20%0AInstagram%3A%20https%3A%2F%2Fwww.instagram.com%2Fpointblank_dsce%2F" class="whatsapp-button" style="color: white !important; text-decoration: none;"><img src="https://static.vecteezy.com/system/resources/thumbnails/016/716/480/small/whatsapp-icon-free-png.png" style="height: 1.5em; vertical-align: middle; margin-right: 5px;" /> SHARE ON WHATSAPP</a>
     <p style="margin-top: 15px; text-align: center; font-size: 14px;">Invite students to participate and gain valuable exposure and real-world experience in cyber security. </p>
     </div>
 
-
     <div class="footer">
       <p>Warm Regards,<br><strong>Team Point Blank</strong></p>
+    </div>
 
-<div>
-   <a href="https://www.linkedin.com/company/point-blank-d/posts/" target="_blank" style="color: white; text-decoration: none;">LinkedIn</a> <span> | </span>
-   <a href="https://www.instagram.com/pointblank_dsce/" target="_blank" style="color: white; text-decoration: none;">Instagram</a> <span> </span>
- </div>
+    <div style="text-align: center; margin-top: 20px;">
+      <a href="https://www.linkedin.com/company/point-blank-d/posts/" target="_blank" style="color: white; text-decoration: none;">LinkedIn</a> <span> | </span>
+      <a href="https://www.instagram.com/pointblank_dsce/" target="_blank" style="color: white; text-decoration: none;">Instagram</a> 
+    </div>
    </div>
    </div>
 </body>
